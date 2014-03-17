@@ -6,7 +6,7 @@
 # This module requires changes to the puppet.conf file that is on the agents,
 # suggest under the [main] section.
 #
-# diff=/usr/local/bin/cdiff
+# diff=/usr/local/bin/sdiff
 # diff_args=-u
 #
 # === Parameters
@@ -26,17 +26,21 @@
 #
 # [*file_pattern*]
 #   String. The pattern that is used to determine which files not to show
-#   diffs for. This value can be configured in hiera using the cdiff::file_pattern
+#   diffs for. This value can be configured in hiera using the sdiff::file_pattern
 #   key.
+#
+#   Example:
+#   sdiff::file_pattern: '\.env'
+#
 #   Defaults to <tt>false</tt>.
 #
 # [*line_pattern*]
 #   String. The pattern that is used to determine lines in a diff to not
 #   show diffs for.  This value can be configured in hiera using the
-#   cdiff::line_pattern key.
+#   sdiff::line_pattern key.
 #
 #   Example:
-#   cdiff::line_pattern: 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\$'
+#   sdiff::line_pattern: 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\$'
 #
 #   Defaults to <tt>false</tt>.
 
