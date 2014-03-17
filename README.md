@@ -61,7 +61,7 @@ Notice: /Stage[main]//Node[vm6.edheroy.com]/Apps::Application[supporter]/File[/v
 -VOLUNTEERMATCH_API_KEY=cdxxxxxxxxxxc85e4077xxxxxxxxxx0026a
 -VOLUNTEERMATCH_ENDPOINT=http://domain.com/api/call
 +VOLUNTEERMATCH_API_KEY=70dxxxxxxxxxx8968e1xxxxxxxx05
-+VOLUNTEERMATCH_ENDPOINT=http://domain.com/api/call
++VOLUNTEERMATCH_ENDPOINT=http://domain2.com/api/call
  VOLUNTEERMATCH_USER=username
  ZENDESK_ENABLED=true
 ```
