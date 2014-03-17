@@ -48,7 +48,7 @@
   "name": "justinhennessy-sdiff",
   "version": "1.0.0",
   "source": "git://github.com/justinhennessy/sdiff",
-  "author": "Justin Hennessy",
+  "author": "Justin Hennessy and Alexandra Spillane",
   "license": "Apache License, Version 2.0",
   "summary": "sdiff Module",
   "description": "A puppet module for suppressing diff output based on file and line regex",
@@ -60,9 +60,9 @@
 
   ],
   "checksums": {
-    "Modulefile": "ae00db7236341cc2337bd91d8028e94d",
+    "Modulefile": "d5d0738da885eb617fd68d9d69b253d1",
     "README.md": "35a6d892bd99cad1fb528be4718bdea4",
-    "manifests/init.pp": "30d4d207dee1123a8dfae31db44c827b",
-    "templates/cdiff.erb": "8f3aedf81714298995d43ece1421c96b"
+    "manifests/init.pp": "48f0c70f1f54acbd8bfe5151ee2c2c6a",
+    "templates/sdiff.erb": "8f3aedf81714298995d43ece1421c96b"
   }
 }
