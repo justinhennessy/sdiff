@@ -23,12 +23,25 @@ You will need to add the following to your puppet.conf on each agent
 .
 .
 .
-diff=/usr/local/bin/cdiff
+diff=/usr/local/bin/sdiff
 diff_args=-u
 ```
 
 Usage:
 =====
+
+```
+class { 'sdiff':
+  color        => false,
+  file_pattern => '\.env',
+  line_pattern => 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\$',
+}
+```
+
+```
+sdiff::file_pattern: '\.env'
+sdiff::line_pattern: 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\$'
+```
 
 Contributors:
 =====
