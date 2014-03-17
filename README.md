@@ -15,7 +15,7 @@ Install in your puppet master's modulepath as a directory named 'sdiff'.
 include sdiff
 ```
 
-You will need to add the following to your puppet.conf
+You will need to add the following to your puppet.conf on each agent
 
 ```ruby
 [main]
