@@ -1,23 +1,31 @@
 #!/bin/bash
 
+<%- if @color -%>
 red="$(tput setaf 1)$(tput bold)"
 green="$(tput setaf 2)$(tput bold)"
 yellow="$(tput setaf 3)$(tput bold)"
 reset="$(tput sgr0)"
+<%- else -%>
+red=""
+green=""
+yellow=""
+reset=""
+<%- end -%>
 
-<% if @file_pattern %>
+<%- if @file_pattern -%>
 if [[ $* =~ <%= @file_pattern %> ]]; then
     echo "${yellow}Suppressing potentially sensitive diff of ${2} vs ${3}.${reset}"
     exit
 fi
-<% end %>
 
-<% if @line_pattern %>
+<%- end -%>
 /usr/bin/diff $@ | \
+<%- if @line_pattern -%>
 sed 's/<%= @line_pattern %>/'$yellow'Suppressing potentially sensitive diff.'$reset'/' | \
+<%- end -%>
+<%- if @color -%>
 sed 's/^\([^+-]\)/'$reset'\1/' | \
 sed 's/^\(+.*\)$/'$green'\1'$reset'/' | \
 sed 's/^\(-.*\)$/'$red'\1'$reset'/'
-<% else %>
-/usr/bin/diff $@
-<% end%>
+<%- end -%>
+cat
