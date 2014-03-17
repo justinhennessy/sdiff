@@ -1,0 +1,7 @@
+name    'justinhennessy-sdiff'
+version '0.1'
+source 'git://github.com/justinhennessy/sdiff'
+author 'Justin Hennessy'
+summary 'sdiff Module'
+description 'A puppet module for suppressing diff output based on file and line patterns'
+project_page 'git://github.com/justinhennessy/sdiff'
