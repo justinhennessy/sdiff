@@ -31,7 +31,7 @@ diff_args=-u
 Usage:
 =====
 
-For use with Hiera simple configure the following keys:
+For use with Hiera simply configure the following keys:
 
 ```
 sdiff::file_pattern: '\.env'
