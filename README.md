@@ -48,8 +48,8 @@ class { 'sdiff':
 When a file pattern is matched, sdiff will change
 
 ```
-Notice: /Stage[main]//Node[vm6.edheroy.com]/Apps::Application[supporter]/File[/var/www/apps/supporter/shared/config/staging.env]/content:
---- /var/www/apps/supporter/shared/config/staging.env 2014-02-14 05:47:12.000000000 +0000
+Notice: /Stage[main]//Node[vmx.domain.com]/Apps::Application[application]/File[/var/www/application/shared/config/staging.env]/content:
+--- /var/www/application/shared/config/staging.env 2014-02-14 05:47:12.000000000 +0000
 +++ /tmp/puppet-file20140218-25927-1tcg13c-0  2014-02-18 07:48:49.000000000 +0000
 @@ -78,8 +78,7 @@
  TWITTER_KEY=gqZzxxxxxxxxxxxecw
@@ -66,8 +66,8 @@ Notice: /Stage[main]//Node[vm6.edheroy.com]/Apps::Application[supporter]/File[/v
 to
 
 ```
-Notice: /Stage[main]//Node[vm6.edheroy.com]/Apps::Application[supporter]/File[/var/www/apps/supporter/shared/config/staging.env]/content:
-Suppressing potentially sensitive diff of /var/www/apps/supporter/shared/config/staging.env vs /tmp/puppet-file20140314-24647-eem4az-0.
+Notice: /Stage[main]//Node[vmx.domain.com]/Apps::Application[application]/File[/var/www/application/shared/config/staging.env]/content:
+Suppressing potentially sensitive diff of /var/www/application/shared/config/staging.env vs /tmp/puppet-file20140314-24647-eem4az-0.
 ```
 
 Line supression works similar but will only suppress matching lines.
