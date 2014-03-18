@@ -1,5 +1,5 @@
 name    'justinhennessy-sdiff'
-version '1.0.1'
+version '1.0.2'
 source 'git://github.com/justinhennessy/sdiff'
 author 'Justin Hennessy and Alexandra Spillane'
 summary 'Provides suppressing diff output based on file and line regex'
