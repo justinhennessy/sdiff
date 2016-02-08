@@ -26,8 +26,8 @@
 #
 # [*file_pattern*]
 #   String. The pattern that is used to determine which files not to show
-#   diffs for. This value can be configured in hiera using the sdiff::file_pattern
-#   key.
+#   diffs for. This value can be configured in hiera using
+#   the sdiff::file_pattern key.
 #
 #   Example:
 #   sdiff::file_pattern: '\.env'
