@@ -44,16 +44,16 @@
 #
 #   Defaults to <tt>false</tt>.
 
-class sdiff(
-  $ensure       = present,
-  $color        = hiera('sdiff::color',true),
-  $file_pattern = hiera('sdiff::file_pattern',false),
-  $line_pattern = hiera('sdiff::line_pattern',false),
+class sdiff (
+  $ensure,
+  $color        = hiera('sdiff::color'),
+  $file_pattern = hiera('sdiff::file_pattern'),
+  $line_pattern = hiera('sdiff::line_pattern'),
 ) {
 
   $file_ensure = $ensure ? {
     present => file,
-    default => present,
+    absent => absent,
   }
 
   file { '/usr/local/bin/sdiff':
