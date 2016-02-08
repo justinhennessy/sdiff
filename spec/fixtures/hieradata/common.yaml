@@ -1,0 +1,5 @@
+---
+sdiff::color: true
+sdiff::file_pattern: '\.env'
+sdiff::line_pattern: 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\'
+
