@@ -6,17 +6,11 @@ A puppet module for suppressing diff output based on file and line patterns
 Installation:
 =====
 
-Install in your puppet master's modulepath as a directory named 'sdiff'.
-
-Either hieradata must be configured or parameters passed in.
+Install in your puppet master's modulepath as a directory named 'sdiff'. This will use
+the defaults or hiera if it has been configured.
 
 ```ruby
-class { 'sdiff':
-  ensure       => present,
-  color        => true,
-  file_pattern => false,
-  line_pattern => false,
-}
+include sdiff
 ```
 
 You will need to add the following to your puppet.conf on each agent
@@ -30,13 +24,6 @@ You will need to add the following to your puppet.conf on each agent
 diff=/usr/local/bin/sdiff
 diff_args=-u
 ```
-
-Tests:
-====
-
-sdiff has a suite of rspec tests. They can be run as follows:
-
-`bin/run_rspec_tests`
 
 Usage:
 =====
