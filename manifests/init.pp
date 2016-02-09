@@ -53,7 +53,7 @@ class sdiff(
 
   $file_ensure = $ensure ? {
     present => file,
-    default => present,
+    absent => absent,
   }
 
   file { '/usr/local/bin/sdiff':

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set +ie
+
+bundle install
+bundle exec rake spec
