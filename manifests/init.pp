@@ -14,21 +14,25 @@
 # [*ensure*]
 #   String. Controls if the managed resources shall be <tt>present</tt> or
 #   <tt>absent</tt>. If set to <tt>absent</tt>:
-#   * System modifications will be reverted
+#   * System modifications (if any) will be reverted as good as possible
 #     (e.g. removal of created users, services, changed log settings, ...).
-#   * Absent is a destructive action
+#   * This is thus destructive and should be used with care.
+#   Defaults to <tt>present</tt>.
 #
 # [*color*]
 #   Boolean. Optionally color line in diff output (red for deletions, green for
 #   insertions and yellow for supression).
+#   Defaults to <tt>true</tt>.
 #
 # [*file_pattern*]
 #   String. The pattern that is used to determine which files not to show
-#   diffs for. This value can be configured in hiera using
-#   the sdiff::file_pattern key.
+#   diffs for. This value can be configured in hiera using the sdiff::file_pattern
+#   key.
 #
 #   Example:
 #   sdiff::file_pattern: '\.env'
+#
+#   Defaults to <tt>false</tt>.
 #
 # [*line_pattern*]
 #   String. The pattern that is used to determine lines in a diff to not
@@ -37,12 +41,14 @@
 #
 #   Example:
 #   sdiff::line_pattern: 'MERCHANT_ID=.*\|PRIVATE_KEY=.*\$'
+#
+#   Defaults to <tt>false</tt>.
 
-class sdiff (
-  $ensure,
-  $color        = hiera('sdiff::color'),
-  $file_pattern = hiera('sdiff::file_pattern'),
-  $line_pattern = hiera('sdiff::line_pattern'),
+class sdiff(
+  $ensure       = present,
+  $color        = hiera('sdiff::color',true),
+  $file_pattern = hiera('sdiff::file_pattern',false),
+  $line_pattern = hiera('sdiff::line_pattern',false),
 ) {
 
   $file_ensure = $ensure ? {
